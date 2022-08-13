@@ -1,0 +1,287 @@
+body{
+            box-sizing: border-box;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .container{
+            position: relative;
+            padding: 50px;
+            transform: scale(0.3);
+        }
+        /* iphone */
+        .iphone-body{
+            position: relative;
+            width: 600px;
+            height: 1200px;
+            border-radius: 80px;
+            border: 3px solid rgba(11, 11, 26, 0.553);
+            outline: 0.5px solid rgba(255, 248, 248, 0.711);
+
+            box-shadow: 0 0 15px rgba(155, 154, 154, 0.864),
+            inset 0 0 5px rgba(44, 38, 38, 0.584);
+
+            background-image: linear-gradient(45deg, #A10035,#EB1D36);
+        }
+        /* glass effect */
+        .back-glass{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background-image: linear-gradient(45deg, #EB1D36,#A10035);
+            filter: blur(10px);
+            opacity: 0.6;
+        }
+
+        .camera{
+            position: relative;
+            width: 280px;
+            height: 280px;
+
+            margin-top: 25px;
+            margin-left: 30px;
+            padding: 15px;
+            border-radius: 70px;
+
+            display: grid;
+            grid-template-columns: 150px 150px;
+            background-image: linear-gradient(45deg, #D82148,#c72a4c);
+
+
+            box-shadow: 10px -10px 10px rgba(33, 31, 31, 0.103),    /* shadow left down (outside) */
+            inset -5px 0px 5px rgba(153, 211, 255, 0.399),  /* shadow left down (inside) */
+            -10px 10px 5px rgba(29, 58, 75, 0.153); /*  shadow right top (outside) */
+            border: 2px solid rgba(39, 27, 27, 0.151);
+        }
+
+        .camera::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            z-index: -1;
+            top: 5px;
+            right: 5px;
+            border: 0.5px solid black;
+            box-shadow: 0 0 20px black;
+            opacity: 0.3;
+        }
+        /* center the first column in the camera */
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .speaker{
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            top: 77%;
+            right: 22px;
+            border-radius: 50%;
+            background-image: linear-gradient(to right,#e3e3e37d,#141111ea,#141111ea,#141111ea,#141111ea,#141111ea,#141111ea,#343434,#e3e3e37d);
+            box-shadow: 0 0 5px #e3e3e38b;
+        }
+        .c1,.c12{
+            width: 130px;
+            height: 130px;
+            background-image: linear-gradient(150deg, #73777B,#839AA8);
+            border-radius: 50%;
+            outline: 1px solid rgba(0, 0, 0, 0.381);
+            filter: blur(0.2px);
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.684),
+             0 0 10px rgba(0, 0, 0, 0.418);
+        }
+        .c12{
+            background-image: linear-gradient(300deg, #73777B,#839AA8);
+        }
+        .c2{
+            width: 55px;
+            height: 55px;
+            background-image: linear-gradient(33deg,
+            rgba(20, 17, 17, 0.918),
+            rgb(52, 52, 52));
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.505);
+        }
+        .c22{
+            width: 55px;
+            height: 55px;
+            background-image: radial-gradient(
+            rgba(253, 255, 238, 0.918),
+            rgba(254, 255, 233, 0.921),
+            rgba(248, 255, 230, 0.86),
+            rgba(235, 251, 183, 0.652),
+            transparent,
+            rgba(252, 255, 226, 0.841));
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.505);
+        }
+
+        .camera-firstColumn{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: space-between;
+        }
+        .camera-secondColumn{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+        .secondColumn-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .c11{
+            position: relative;
+            width: 90%;
+            height: 90%;
+            border-radius: inherit;
+            background-image: radial-gradient(#1b283611,#1b2836ca,rgba(0, 0, 0, 0.758),rgba(0, 0, 0, 0.688),rgba(0, 0, 0, 0.942));
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.633),
+             0 0 3px rgba(255, 255, 255, 0.526);
+        }
+        
+        .c1-lens{
+            position: relative;
+            width: 20%;
+            height: 20%;
+            border-radius: inherit;
+            background-color: rgba(22, 11, 11, 0.893);
+            filter: blur(1px);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.353); 
+            overflow: hidden;
+            transform: rotate(70deg);
+        }
+        .c1-lens::after{
+            content: "";
+            position: absolute;
+            width:100% ;
+            height: 50%;
+            z-index: 99;
+            background-image: linear-gradient(#3a98f0aa,#53acff8d,transparent,black); /*color start from right */
+        }
+        .c1-lens::before{
+            content: "";
+            position: absolute;
+            width:100% ;
+            height: 50%;
+            z-index: 99;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(black,transparent,#7dff883a,#f3ff0a57); /*color start from left  */
+        }
+        .c2-c3-lens{
+            position: relative;
+            width: 30%;
+            height: 30%;
+            border-radius: inherit;
+            background-color: rgba(22, 11, 11, 0.893);
+            filter: blur(1px);
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.353); 
+            overflow: hidden;
+            transform: rotate(90deg);
+        }
+        .c2-c3-lens::after{
+            content: "";
+            position: absolute;
+            width:100% ;
+            height: 50%;
+            z-index: 99;
+            background-image: linear-gradient(#3a98f0aa,#53acff8d,transparent,black); /*color start from right */
+        }
+        .c2-c3-lens::before{
+            content: "";
+            position: absolute;
+            width:100% ;
+            height: 50%;
+            z-index: 99;
+            bottom: 0;
+            right: 0;
+            background-image: linear-gradient(black,transparent,#7dff883a,#f3ff0a57); /*color start from left  */
+        }
+        .lens-dot-right{
+            position: absolute;
+            width: 8%;
+            height: 8%;
+            border-radius: 50%;
+            top: 50%;
+            left: 52%;
+            z-index: 9999999;
+            background-image: linear-gradient(90deg,transparent,#bee1fe71,#88c2f869);
+        }
+        .lens-dot-left{
+            position: absolute;
+            width: 8%;
+            height: 8%;
+            border-radius: 50%;
+            top: 40%;
+            left: 40%;
+            z-index: 99999999;
+            background-image: linear-gradient(90deg,#f3ff0a57,#205a2561);
+            box-shadow: 0 0 10px #ffffffaa;
+        }
+        
+        .button{
+            position: absolute;
+            width: 6px;
+            background-image: linear-gradient(to right,#a20f40,#76052b,#791536);
+            border-radius: 0 5px 5px 0;
+        }
+        .powerb{
+            height: 120px;
+            left: -11px;
+            top: 32%;
+            border-radius: 5px 0 0 5px;
+        }
+        .volume-up{
+            right: -11px;
+            top: 28%;
+            height: 80px;
+        }
+        .volume-down{
+            right: -11px;
+            top: 36%;
+            height: 80px;
+        }
+        .silentkey{
+            right: -11px;
+            top: 20%;
+            height: 50px;
+        }
+        .logo{
+            position: absolute;
+            width: 135px;
+            height: 135px;
+            opacity: 0.8;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+         .iphone-shadow{
+            position: absolute;
+            width: 110%;
+            height: 30px;
+            border-radius: 100%;
+        
+            bottom: 1px;
+            left: -30px;
+
+            transform: rotateX(30deg);
+            transform: rotateY(30deg);
+
+            background-image: linear-gradient(to top,rgba(35, 40, 34, 0.096),rgba(5, 16, 35, 0.367));
+            filter: blur(20px);
+            z-index: -1;
+        } 
+    
